@@ -11,80 +11,98 @@
         <section class="sidebar">
             <nav>
                 <ul>
-                    <li><a href="restaurant.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Your Cart</a></li>
                 </ul>
             </nav>
         </section>
 
         <main class="menu">
             <h1>Menu</h1>
-            <article class="menu-item">
+            <article class="menu-item" id="birria-tacos">
                 <div class="menu-img"><img src="https://i.pinimg.com/originals/db/0d/8b/db0d8b438088b75d9e20796e3c0babbb.jpg" alt="Birria Taco"></div>
                 <div class="menu-content">
                     <h2>BIRRIA TACOS</h2>
                     <h3>$6.77</h3>
                     <p>Tasty tacos filled with tender, slow-cooked beef, topped with melted cheese, onions, and cilantro. Served with a side of rich consomme for dipping.</p>
+                    <h5 class="add-to-cart" data-name="Birria Tacos" data-price="6.77">Add to Cart</h5>
                 </div>
             </article>
 
-            <article class="menu-item">
+            <article class="menu-item" id="al-pastor-tacos">
                 <div class="menu-img"><img src="https://iamafoodblog.b-cdn.net/wp-content/uploads/2021/05/al-pastor-3507w.jpg" alt="Al Pastor Taco"></div>
                 <div class="menu-content">
                     <h2>AL PASTOR TACOS</h2>
                     <h3>$41.66</h3>
                     <p>Marinated pork cooked on a vertical spit, served with pineapple, onions, and cilantro. A perfect balance of sweet and savory flavors.</p>
+                    <h5 class="add-to-cart" data-name="Al Pastor Tacos" data-price="41.66">Add to Cart</h5>
                 </div>
             </article>
 
-            <article class="menu-item">
+            <article class="menu-item" id="carne-asada-tacos">
                 <div class="menu-img"><img src="https://gran.luchito.com/wp-content/uploads/2018/11/Carne-Asada-Tacos-1.jpg" alt="Carne Asada Taco"></div>
                 <div class="menu-content">
                     <h2>CARNE ASADA TACOS</h2>
                     <h3>$4.20</h3>
                     <p>Grilled steak seasoned to perfection, topped with fresh onions and cilantro. Served with a side of tangy salsa.</p>
+                    <h5 class="add-to-cart" data-name="Carne Asada Tacos" data-price="4.20">Add to Cart</h5>
                 </div>
             </article>
 
-            <article class="menu-item">
+            <article class="menu-item" id="steak-fajitas">
                 <div class="menu-img"><img src="https://bakeitwithlove.com/wp-content/uploads/2023/02/steak-fajitas-sq.jpg" alt="Steak Fajitas"></div>
                 <div class="menu-content">
                     <h2>STEAK FAJITAS</h2>
                     <h3>$6.99</h3>
                     <p>Sizzling strips of marinated steak cooked with bell peppers and onions. Served with warm tortillas, guacamole, sour cream, and salsa.</p>
+                    <h5 class="add-to-cart" data-name="Steak Fajitas" data-price="6.99">Add to Cart</h5>
                 </div>
             </article>
 
-            <article class="menu-item">
+            <article class="menu-item" id="tostadas">
                 <div class="menu-img"><img src="https://magazine.foodpanda.my/wp-content/uploads/sites/12/2019/10/cropped-Tostadas.jpg" alt="Tostadas"></div>
                 <div class="menu-content">
                     <h2>TOSTADAS</h2>
                     <h3>$9.00</h3>
                     <p>Crispy corn tortillas topped with refried beans, shredded lettuce, diced tomatoes, cheese, and your choice of meat (chicken, beef, or pork).</p>
+                    <h5 
+                    class="add-to-cart" data-name="Tostadas" data-price="9.00">
+                    Add to Cart
+                    </h5>
                 </div>
             </article>
 
-            <article class="menu-item">
+            <article class="menu-item" id="chorizo-tacos">
                 <div class="menu-img"><img src="https://insanelygoodrecipes.com/wp-content/uploads/2024/10/chorizo-tacos.jpg" alt="Chorizo Tacos"></div>
                 <div class="menu-content">
                     <h2>CHORIZO TACOS</h2>
                     <h3>$10.00</h3>
                     <p>Spicy Mexican sausage cooked to perfection, topped with onions and cilantro. Served with a side of fresh lime wedges.</p>
+                    <h5 
+                    class="add-to-cart" data-name="Chorizo Tacos" data-price="10.00">
+                    Add to Cart
+                    </h5>
                 </div>
             </article>
 
-            <article class="menu-item">
+            <article class="menu-item" id="carnita-tacos">
                 <div class="menu-img"><img src="https://www.nospoonnecessary.com/wp-content/uploads/2015/05/pork-carnitas-tacos.jpg" alt="Carnita Tacos"></div>
                 <div class="menu-content">
                     <h2>CARNITA TACOS</h2>
                     <h3>$0.21</h3>
                     <p>Slow-cooked pork that is tender on the inside and crispy on the outside. Topped with onions, cilantro, and a squeeze of lime.</p>
+                    <h5 
+                    class="add-to-cart" data-name="Carnita Tacos" data-price="0.21">
+                    Add to Cart
+                    </h5>
                 </div>
             </article>
 
         </main>
         <script src="mobile-nav.js"></script>
-        </body>
-    </html>
+        <script src="add-to-cart.js"></script>
+    </body>
+</html>

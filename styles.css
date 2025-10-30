@@ -241,11 +241,22 @@ nav a:visited {
     h3 {
         font-size: 1.5rem;
     }
+	h5 {
+		margin-top: -1rem;
+		cursor: pointer;
+		font-size: 1.2rem;
+		color: #c73e3e;
+		
+	}
     p {
         padding-bottom: 2rem;
         padding-left: 2rem;
         padding-right: 2rem;
     }
+}
+
+.menu h5:hover {
+	color: #a12020;
 }
 
 .menu-item {
@@ -299,6 +310,117 @@ nav a:visited {
 	margin-top: 10rem;
 }
 
+#cart-body {
+	max-width: 900px;
+	padding: 2rem 1rem;
+	box-sizing: border-box;
+	margin-left: 10rem;
+}
+
+#cart-items {
+    p {
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+	span {
+		padding-top: 2rem;
+		color: #B84545;
+		font-size: 1.2rem;
+		margin-top: 0.25rem;
+		margin-right: 0;
+		margin-bottom: 0.25rem;
+		margin-left: 0; 
+	}
+}
+
+#cart-items .remove-item {
+	font-size: 1.1rem;
+	cursor: pointer;
+	color: #bf0404;
+	margin-top: 0.25rem;
+	margin-right: 0;
+	margin-bottom: 0.25rem;
+	margin-left: 2rem; 
+}
+
+#cart-items .cart-item-qty {
+	color: #b11212
+}
+
+#cart-items .cart-item-price {
+	color: #932929;
+	margin-left: 0.25rem;
+}
+
+#cart-items .remove-item:hover {
+	color: #710c0c;
+}
+
+/* mobile friendly cart items */
+.cart-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.6rem 0.4rem;
+	border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.cart-item-name {
+	flex: 1 1 auto;
+	font-weight: 600;
+	color: #7a0d0d;
+}
+
+.cart-item-qty {
+	flex: 0 0 auto;
+	color: #b11212;
+	margin-left: 0.5rem;
+}
+
+.cart-item-price {
+	flex: 0 0 auto;
+	color: #932929;
+	margin-left: 0.75rem;
+}
+
+.remove-item {
+	flex: 0 0 auto;
+	background: transparent;
+	border: 0;
+	color: #bf0404;
+	padding: 0.35rem 0.6rem;
+	border-radius: 6px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.remove-item:focus {
+	outline: 3px solid rgba(150,150,255,0.25);
+	outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+	#cart-items .cart-item {
+		flex-direction: column;
+		align-items: stretch;
+		text-align: left;
+		gap: 0.25rem;
+		padding: 0.75rem 0.5rem;
+	}
+
+	.cart-item-price, .cart-item-qty {
+		margin-left: 0;
+	}
+
+	.remove-item {
+		align-self: flex-end;
+		margin-top: 0.25rem;
+		width: auto;
+	}
+}
+
 @media (max-width: 640px) {
 	:root { --menu-img-height: 5rem; }
 	.menu-item {
@@ -309,7 +431,6 @@ nav a:visited {
 	.menu-img img { width: 100%; height: 100%; object-fit: cover; }
 }
 
-/* Responsive navigation + sidebar collapse */
 @media (max-width: 860px) {
     .sidebar { display: none; }
     nav { position: relative; }
