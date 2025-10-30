@@ -103,6 +103,30 @@ function updateCartDisplay() {
             });
         }
     }
+    updateCartBadge();
+}
+
+// add or remove a small red dot on any <a href="...cart.html"> links when cartCount > 0
+function updateCartBadge() {
+    try {
+        // match links that end with cart.html or contain /cart.html
+        const links = Array.from(document.querySelectorAll('a[href$="cart.html"], a[href*="/cart.html"]'));
+        links.forEach(a => {
+            var badge = a.querySelector('.cart-badge');
+            if (cartCount > 0) {
+                if (!badge) {
+                    badge = document.createElement('span');
+                    badge.className = 'cart-badge';
+                    badge.setAttribute('aria-hidden', 'true');
+                    a.appendChild(badge);
+                }
+            } else {
+                if (badge) a.removeChild(badge);
+            }
+        });
+    } catch (err) {
+        console.warn('Could not update cart badge', err);
+    }
 }
 
 function saveCartToStorage() {

@@ -421,6 +421,20 @@ nav a:visited {
 	}
 }
 
+/* tiny red dot badge for cart links */
+.cart-badge {
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.4rem;
+	background: #c73e3e;
+	border-radius: 50%;
+	vertical-align: center;
+}
+
+@media (max-width: 420px) {
+	.cart-badge { width: 0.55rem; height: 0.55rem; margin-left: 0.35rem; }
+}
+
 @media (max-width: 640px) {
 	:root { --menu-img-height: 5rem; }
 	.menu-item {
