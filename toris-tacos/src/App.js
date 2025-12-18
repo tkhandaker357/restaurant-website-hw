@@ -6,6 +6,7 @@ import Menu from './components/Pages/Menu';
 import About from './components/Pages/About';
 import Contact from './components/Pages/Contact';
 import Cart from './components/Pages/Cart';
+import Toast from './components/UI/Toast';
 import './styles.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <CartProvider>
       <Router>
         <div className="App">
+          <Toast />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />

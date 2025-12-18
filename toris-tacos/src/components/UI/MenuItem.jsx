@@ -1,20 +1,12 @@
 import React from 'react';
 import { useCart } from '../../hooks/useCart';
 
-const MenuItem = ({ item, index }) => {
+const MenuItem = ({ item }) => {
   const { addToCart } = useCart();
 
-  const handleAddToCart = (e) => {
-    const name = e.currentTarget.dataset.name;
-    const price = parseFloat(e.currentTarget.dataset.price) || 0;
-    addToCart(name, price);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar' || e.code === 'Space') {
-      e.preventDefault();
-      e.currentTarget.click();
-    }
+  const handleAddToCart = () => {
+    const price = parseFloat(item.price) || 0;
+    addToCart(item.name, price);
   };
 
   return (
@@ -26,17 +18,14 @@ const MenuItem = ({ item, index }) => {
         <h2>{item.name}</h2>
         <h3>${item.price}</h3>
         <p>{item.description}</p>
-        <h5 
-          className="add-to-cart"
-          data-name={item.name}
-          data-price={item.price}
+        <button
+          className="add-to-cart-button"
+          type="button"
           onClick={handleAddToCart}
-          onKeyDown={handleKeyDown}
-          role="button"
-          tabIndex="0"
+          aria-label={`Add ${item.name} to cart`}
         >
           Add to Cart
-        </h5>
+        </button>
       </div>
     </article>
   );
