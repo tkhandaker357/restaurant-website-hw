@@ -14,3 +14,7 @@ const Toast = () => {
 };
 
 export default Toast;
+
+git add [Toast.jsx](http://_vscodecontentref_/2)
+git commit -m "Add Toast component"
+git push
