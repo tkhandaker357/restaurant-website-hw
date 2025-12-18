@@ -17,7 +17,7 @@ const MenuItem = ({ item }) => {
       <div className="menu-content">
         <h2>{item.name}</h2>
         <h3>${item.price}</h3>
-        <p>{item.description}</p>
+        <p>{item.description}</p> 
         <button
           className="add-to-cart-button"
           type="button"
